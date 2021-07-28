@@ -96,11 +96,12 @@ suite("Functional Tests with Zombie.js", function () {
     // #6
     test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
       browser.fill("surname", "Vespucci").pressButton("submit", function () {
-        assert.equal(browser.document.title, "Giovanni Vespucci");
-      });
-
+        browser.assert.success();
+        browser.assert.text('span#name', 'Cristoforo');
+        browser.assert.text('span#surname', 'Colombo');
+        browser.assert.elements('span#dates', 1);
 
       done();
     });
   });
-
+});
