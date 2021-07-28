@@ -87,16 +87,20 @@ suite("Functional Tests with Zombie.js", function () {
     // #5
     test('submit "surname" : "Colombo" - write your e2e test...', function (done) {
       browser.fill("surname", "Colombo").pressButton("submit", function () {
-        assert.fail();
+        assert.equal(browser.document.title, "Cristoforo Colombo");
+      });
 
         done();
       });
     });
     // #6
     test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
-      assert.fail();
+      browser.fill("surname", "Vespucci").pressButton("submit", function () {
+        assert.equal(browser.document.title, "Giovanni Vespucci");
+      });
+
 
       done();
     });
   });
-});
+
