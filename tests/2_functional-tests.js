@@ -95,8 +95,8 @@ suite("Functional Tests with Zombie.js", function () {
       });
 
         
-      });
     });
+    
     // #6
     test('submit "surname" : "Vespucci" - write your e2e test...', function (done) {
       browser.fill("surname", "Vespucci").pressButton("submit", function () {
@@ -109,3 +109,4 @@ suite("Functional Tests with Zombie.js", function () {
     });
   });
 });
+})
